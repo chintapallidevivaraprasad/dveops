@@ -8,20 +8,20 @@ pipeline {
                 
             }
         }
-    }
- stage('init') {
+        stage('init') {
             steps {
                 sh 'terraform init'
             }
         }
- stage('plan') {
+        stage('plan') {
             steps {
                 sh 'terraform plan'
             }
         }
-stage('apply') {
+        stage('apply') {
             steps {
                 sh 'terraform apply -auto-approve'
             }
         }
+    }    
 }

@@ -4,25 +4,25 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch https://github.com/chintapallidevivaraprasad/dveops.git
+                
             }
         }
     }stages {
         stage('init') {
             steps {
-                sh terraform init
+                sh 'terraform init'
             }
         }
 stages {
         stage('plan') {
             steps {
-                sh terraform plan
+                sh 'terraform plan'
             }
         }
 stages {
         stage('apply') {
             steps {
-                sh terraform apply
+                sh 'terraform apply -auto-approve'
             }
         }
 }

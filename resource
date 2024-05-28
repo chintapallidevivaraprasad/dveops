@@ -9,25 +9,19 @@ pipeline {
             }
         }
     }
-    stages {
-        stage('init') {
+ stage('init') {
             steps {
                 sh 'terraform init'
             }
         }
-}
-stages {
-        stage('plan') {
+ stage('plan') {
             steps {
                 sh 'terraform plan'
             }
         }
-}
-stages {
-        stage('apply') {
+stage('apply') {
             steps {
                 sh 'terraform apply -auto-approve'
             }
         }
-}
 }

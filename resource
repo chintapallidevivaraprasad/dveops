@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch
+                git branch https://github.com/chintapallidevivaraprasad/dveops.git
             }
         }
     }stages {
